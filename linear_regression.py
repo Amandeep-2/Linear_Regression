@@ -10,7 +10,7 @@ print(df.shape)
 #print(df.columns)
 
 df = df[["accommodates","source","name","price"]]
-# There are 75 columns in this dataset so I will select "price" as y and 'id' as x
+# There are 75 columns in this dataset so I am just selecting "price" as y and 'accommodates' as x.
 df.price = df.price.str.replace("$", "")
 df.price = df.price.str.replace(",", "")
 #print(df)
