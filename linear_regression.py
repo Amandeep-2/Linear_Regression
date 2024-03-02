@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn import linear_model
 plt.rcParams["figure.figsize"] = (20.0, 10.0)
 
 
@@ -66,3 +67,7 @@ for i in range(n):
 r2 = 1 - (ss_r/ss_t)
 
 print(r2)
+
+reg = linear_model.LinearRegression()
+reg.fit(x.reshape(-1,1),y)
+print(reg.predict([[13]]))
